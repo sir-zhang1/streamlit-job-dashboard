@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import pathlib
 
 # --- 页面基础设置 ---
 st.set_page_config(page_title="长三角就业看板", layout="wide")
@@ -367,8 +368,11 @@ skill_map = {
 }
 
 # --- 2. 数据加载与处理函数 ---
-CLEANED_DATA_PATH = 'd:\\编程\\招聘数据小demo\\招聘数据_清洗后.csv'
-EXPLODED_DATA_PATH = 'd:\\编程\\招聘数据小demo\\招聘数据_技能展开.csv'
+# --- 获取当前脚本所在的目录 ---
+SCRIPT_DIR = pathlib.Path(__file__).parent.resolve()
+# --- 定义相对于脚本目录的文件路径 ---
+CLEANED_DATA_PATH = SCRIPT_DIR / '招聘数据_清洗后.csv'
+EXPLODED_DATA_PATH = SCRIPT_DIR / '招聘数据_技能展开.csv'
 
 @st.cache_data # 缓存数据
 def load_and_process_data(cleaned_path, exploded_path, skill_mapping):
