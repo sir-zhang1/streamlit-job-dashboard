@@ -520,7 +520,7 @@ if df is not None and df_exploded is not None:
             else:
                 # --- 具体技能对比 ---
                 st.subheader("Top 15 具体技能需求占比对比 (%)")
-                skill_counts = comparison_data.groupby(['city', 'skill_single']).size().reset_index(name='count')  
+                skill_counts = comparison_data.groupby(['city', 'skill_single']).size().reset_index(name='count')                            
                 city_totals = comparison_data.groupby('city').size().reset_index(name='total_skills')
                 skill_proportions = pd.merge(skill_counts, city_totals, on='city')
                 skill_proportions['proportion'] = (skill_proportions['count'] / skill_proportions['total_skills']) * 100
@@ -567,4 +567,5 @@ else:
 # --- 页脚 ---
 st.write("---")
 st.caption("项目作者：刘庭宜&彭振旗 | 数据来源：BOSS直聘 (2025.04)")
+
 
