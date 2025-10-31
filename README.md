@@ -8,7 +8,7 @@
 
 **点击下方链接，即可在线访问并体验本项目的数据看板：**
 
-[**https://djtu-zhangmengang.streamlit.app/**](https://djtu-zhangmengang.streamlit.app/)
+[**https://djtu-zhangmengang.streamlit.app/**](https://djtu-zhangmengang.streamlit.app/)  
 
 ## 📸 应用截图
 
@@ -67,4 +67,5 @@
 ## 🧑‍💻 作者
 
 * **刘庭宜** - 大连交通大学
+* **彭振旗** - 大连交通大学
 ---
